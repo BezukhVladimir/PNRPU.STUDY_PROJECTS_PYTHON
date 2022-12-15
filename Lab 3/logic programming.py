@@ -11,6 +11,7 @@ pyDatalog.create_terms('series_sum, N, Series_sum')
 
 series_sum[0] = 0
 series_sum[N] = N + series_sum[N - d]
+
 log.write("Сумма ряда 0 - 999\n"
           + str(series_sum[a_n] == Series_sum)
           + "\n\n")
@@ -19,6 +20,7 @@ log.write("Сумма ряда 0 - 999\n"
 pyDatalog.create_terms('series_mean, Series_mean')
 
 series_mean[N] = series_sum[N] / N
+
 log.write("Среднее значение ряда\n"
           + str(series_mean[a_n] == Series_mean)
           + "\n\n")
@@ -36,3 +38,12 @@ median[N] = rns[N // 2] if a_n % 2 == 1\
 log.write("Медиана ряда 999 целых случайных чисел от 1 до 10\n"
           + str(median[a_n] == Median)
           + "\n\n")
+
+# fourth task
+pyDatalog.create_terms('prod, Prod')
+
+prod[1] = rns[0]
+prod[N] = rns[N - 1] * prod[N - 1]
+
+log.write("Произведение ряда 999 целых случайных чисел от 1 до 10:\n"
+          + str(prod[a_n] == Prod))
