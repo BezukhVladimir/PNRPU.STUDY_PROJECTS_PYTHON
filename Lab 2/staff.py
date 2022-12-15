@@ -9,14 +9,11 @@ class Person:
 
     def __str__(self):
         return f"Person fullname: {self.fullname}," \
-               f"age: {self.age}"
+               f" age: {self.age}"
 
     def __repr__(self):
-        return f"Person(fullname={self.fullname}, age={self.age})"
-
-    def print(self):
-        print("Fullname:", self.fullname)
-        print("Age:", self.age)
+        return f"Person(fullname={self.fullname}," \
+               f" age={self.age})"
 
     def save(self, json_filepath: str):
         to_json = {
@@ -41,15 +38,13 @@ class Employee(Person):
 
     def __str__(self):
         return f"Employee fullname: {self.fullname}," \
-               f"age: {self.age}," \
-               f"position: {self.position}"
+               f" age: {self.age}," \
+               f" position: {self.position}"
 
     def __repr__(self):
-        return f"Employee(fullname={self.fullname}, age={self.age}, position={self.position})"
-
-    def print(self):
-        super().print()
-        print("Position:", self.position)
+        return f"Employee(fullname={self.fullname}," \
+               f" age={self.age}," \
+               f" position={self.position})"
 
     def reposition(self, new_position):
         self.position = new_position

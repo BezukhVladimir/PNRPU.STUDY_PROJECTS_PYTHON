@@ -1,18 +1,22 @@
 import staff
 
+log = open("log.txt", 'w')
+
 employee = staff.Employee("Vladimir Bezukh", 22, "Student")
 
 # save
 employee.save("employee_data.json")
-print("Saved information:")
-employee.print()
+log.write(f"Saved information\n"
+          f"{employee}\n"
+          f"\n")
 
 # change
 employee.reposition("Python programmer")
-print("\nChange of position:")
-employee.print()
+log.write(f"Change of position\n"
+          f"{employee}\n"
+          f"\n")
 
 # load
 employee.load("employee_data.json")
-print("\nLoaded information:")
-employee.print()
+log.write(f"Loaded information\n"
+          f"{employee}\n")

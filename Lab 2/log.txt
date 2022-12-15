@@ -1,0 +1,8 @@
+Saved information
+Employee fullname: Vladimir Bezukh, age: 22, position: Student
+
+Change of position
+Employee fullname: Vladimir Bezukh, age: 22, position: Python programmer
+
+Loaded information
+Employee fullname: Vladimir Bezukh, age: 22, position: Student

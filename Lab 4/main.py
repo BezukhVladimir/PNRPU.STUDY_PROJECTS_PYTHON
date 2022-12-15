@@ -1,12 +1,10 @@
-def reduce(function, iterable, initializer=None):
-    it = iter(iterable)
-    if initializer is None:
-        value = next(it)
-    else:
-        value = initializer
-    for element in it:
-        value = function(value, element)
-    return value
+from reduce import reduce
+
+log = open("log.txt", 'w')
 
 items = [1, 2, 3, 4, 5]
-print(reduce(lambda x, y: x + y, items))
+log.write(f"Метод reduce\n"
+          f"{reduce(lambda x, y: x + y, items)}\n"
+          f"\n")
+log.write(f"Метод map\n"
+          f"{list(map(lambda x: x ** 2, items))}")
