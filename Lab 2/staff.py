@@ -7,6 +7,13 @@ class Person:
         self.fullname = fullname
         self.age = age
 
+    def __str__(self):
+        return f"Person fullname: {self.fullname}," \
+               f"age: {self.age}"
+
+    def __repr__(self):
+        return f"Person(fullname={self.fullname}, age={self.age})"
+
     def print(self):
         print("Fullname:", self.fullname)
         print("Age:", self.age)
@@ -31,6 +38,14 @@ class Employee(Person):
     def __init__(self, fullname, age, position):
         super().__init__(fullname, age)
         self.position = position
+
+    def __str__(self):
+        return f"Employee fullname: {self.fullname}," \
+               f"age: {self.age}," \
+               f"position: {self.position}"
+
+    def __repr__(self):
+        return f"Employee(fullname={self.fullname}, age={self.age}, position={self.position})"
 
     def print(self):
         super().print()
