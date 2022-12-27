@@ -47,3 +47,5 @@ prod[N] = rns[N - 1] * prod[N - 1]
 
 log.write(f"Произведение ряда 999 целых случайных чисел от 1 до 10:\n"
           f"{(prod[a_n] == Prod)}")
+
+log.close()

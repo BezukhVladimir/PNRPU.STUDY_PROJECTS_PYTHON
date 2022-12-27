@@ -20,3 +20,5 @@ log.write(f"Change of position\n"
 employee.load("employee_data.json")
 log.write(f"Loaded information\n"
           f"{employee}\n")
+
+log.close()

@@ -32,3 +32,5 @@ log.write(f"Медиана ряда 1 000 000 целых случайных чи
 # fourth task
 log.write(f"Произведение ряда 1 000 000 целых случайных чисел от 1 до 10:\n"
           f"{prod(random_number_series)}")
+
+log.close()
